@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block head %}
+    <!-- Link to the styles.css file for applying styles -->
+<!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
+{% endblock %}
+{% block content %}
+    <h1>Register</h1>
+    <div class="form" style="padding-left:20px;">
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.username.label(class="form-control-label") }}<br>
+            {{ form.username(class="form-control")}}
+            {% for error in  form.username.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.password.label(class="form-control-label")}}<br>
+            {{ form.password(class="form-control") }}
+            {% for error in  form.password.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+{#        <p>#}
+{#           {{ form.Email.label }}<br>#}
+{#            {{ form.Email(size=32) }}#}
+{#        </p>#}
+        <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+        <p>{{ form.submit(class="btn  btn-primary") }}</p>
+    </form>
+    </div>
+{% endblock%}

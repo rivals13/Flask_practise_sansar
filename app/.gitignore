@@ -1,0 +1,56 @@
+# ----------------------
+# 🐍 Python
+# ----------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ----------------------
+# 📦 Virtual Environments
+# ----------------------
+venv/
+.venv/
+env/
+flaskenv/
+
+# ----------------------
+# 🧠 IDE / Editor
+# ----------------------
+.idea/
+*.iml
+.vscode/
+
+# ----------------------
+# 🔐 Environment & Secrets
+# ----------------------
+.env
+.flaskenv
+
+# Custom sensitive files
+github_pass
+github_pass.pub
+github_passkey
+github_passkey.pub
+
+# ----------------------
+# 🌐 Flask
+# ----------------------
+instance/
+.webassets-cache
+
+# ----------------------
+# 💾 Database
+# ----------------------
+*.sqlite3
+*.db
+
+# ----------------------
+# 🪵 Logs
+# ----------------------
+*.log
+
+# ----------------------
+# 💻 OS Files
+# ----------------------
+.DS_Store
+Thumbs.db
