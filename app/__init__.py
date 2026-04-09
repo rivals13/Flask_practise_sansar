@@ -1,11 +1,14 @@
-"""
-this  app will act as  the  setup  of the  application  liie the   general description
-  and other  definition of  the   app will be done  here
-
-
-"""
 from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+from dotenv import load_dotenv
+import os
+
+load_dotenv()  # ✅ load .env first
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY') or 'you-will-never-guess'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 
-from app import routes 
+db = SQLAlchemy(app)
+
+from app import routes  # always at the bottom

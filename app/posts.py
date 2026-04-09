@@ -1,5 +1,4 @@
 import  datetime
-
 posts = [
     {
         'author': {'username': 'Rachel'},
